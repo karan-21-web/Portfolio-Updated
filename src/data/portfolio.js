@@ -2,22 +2,9 @@
 // Portfolio data — edit here to update content
 // ─────────────────────────────────────────────
 
-
+import { image } from 'framer-motion/client'
 import proj01 from '../assets/project-01.png'
 import proj02 from '../assets/project-02.png'
-
-export const PROJECTS = [
-  {
-    number: '01',
-    image: proj01,   // ← ADD THIS
-    // ... rest unchanged
-  },
-  {
-    number: '02',
-    image: proj02,   // ← ADD THIS
-    // ...
-  },
-]
 
 export const NAV_LINKS = [
   { label: 'About',    href: '#about'    },
@@ -75,15 +62,17 @@ export const SKILLS = [
 export const PROJECTS = [
   {
     number: '01',
+   image: proj02,
     title: 'Virtual Password Authentication System',
     description:
       'A dynamic virtual keyboard-based login system designed to mitigate phishing and keylogging attacks. Implements client-side secure authentication logic with a clean, intuitive UI.',
     stack: ['HTML', 'CSS', 'JavaScript'],
     github: 'https://github.com/karan-21-web/Dynamic-Virtual-Password-System',
-    live: 'https://news-hub-ai-neon.vercel.app/', 
+    
   },
   {
     number: '02',
+     image: proj01,
     title: 'NewsHub AI – Real-Time News Web App',
     description:
       'Developed a responsive real-time news application consuming the GNews API with dynamic category-wise and city-wise filtering.',
@@ -93,12 +82,13 @@ export const PROJECTS = [
   },
   {
     number: '03',
+     image: proj01,
     title: 'SIH Hackathon Prototype',
     description:
       'Collaborated in a 6-member team at Smart India Hackathon to design and prototype a real-world problem solution under strict time constraints — from ideation to a working demo.',
     stack: ['React.js', 'Python', 'MongoDB'],
     github: 'https://github.com/karanshakarwal',
-    live: 'https://news-hub-ai-neon.vercel.app/', 
+    
   },
 ]
 

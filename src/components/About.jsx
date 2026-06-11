@@ -28,7 +28,7 @@ export default function About() {
           <div className="section-label">About Me</div>
         </RevealBlock>
 
-        <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-[60px] items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-8 md:gap-[60px] items-start">
 
           {/* Avatar */}
           <RevealBlock delay={0.1}>

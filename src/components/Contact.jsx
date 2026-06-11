@@ -76,7 +76,7 @@ export default function Contact() {
           <p className="text-ink-2 text-[1.05rem] -mt-6 mb-12">{CONTACT.sub}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-8 md:gap-16 items-start">
 
           {/* Info */}
           <motion.div
