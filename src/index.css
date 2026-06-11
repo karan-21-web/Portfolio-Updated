@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Google Fonts already loaded via <link> in index.html ── */
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f8f7f4;
+    color: #0d0d0d;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a  { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  button { cursor: pointer; font-family: inherit; }
+}
+
+@layer components {
+
+  /* ── Section label (eyebrow) ── */
+  .section-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #1a6bff;
+    margin-bottom: 16px;
+  }
+
+  /* ── Section heading ── */
+  .section-heading {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #0d0d0d;
+    margin-bottom: 40px;
+  }
+
+  /* ── Buttons ── */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 13px 28px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: all 0.22s ease;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: #0d0d0d;
+    color: #fff;
+    border-color: #0d0d0d;
+  }
+  .btn-primary:hover {
+    background: #1a6bff;
+    border-color: #1a6bff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(26,107,255,0.3);
+  }
+  .btn-outline {
+    background: transparent;
+    color: #0d0d0d;
+    border-color: #0d0d0d;
+  }
+  .btn-outline:hover {
+    background: #0d0d0d;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  .btn-large {
+    font-size: 16px;
+    padding: 16px 36px;
+  }
+  .btn-full {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ── Nav link underline animation ── */
+  .nav-link-animated {
+    position: relative;
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444444;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+  }
+  .nav-link-animated::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -3px;
+    width: 0; height: 2px;
+    background: #1a6bff;
+    transition: width 0.25s ease;
+  }
+  .nav-link-animated:hover { color: #0d0d0d; }
+  .nav-link-animated:hover::after { width: 100%; }
+
+  /* ── Hamburger ── */
+  .hamburger-bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #0d0d0d;
+    border-radius: 2px;
+    transition: all 0.28s ease;
+  }
+
+  /* ── Hero dot-grid background ── */
+  .hero-dot-grid {
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(circle, #c8c5be 1px, transparent 1px);
+    background-size: 28px 28px;
+    opacity: 0.45;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  /* ── Hero name clamped font ── */
+  .hero-name {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(3.5rem, 9vw, 7.5rem);
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    color: #0d0d0d;
+    margin-bottom: 24px;
+  }
+
+  /* ── Available status dot ── */
+  .available-dot::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1a9a52;
+    margin-right: 6px;
+    animation: pulseDot 2s ease infinite;
+  }
+
+  /* ── Skill chip hover ── */
+  .skill-chip {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #f8f7f4;
+    border: 1px solid #e4e2dc;
+    border-radius: 100px;
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0d0d0d;
+    transition: all 0.2s;
+    cursor: default;
+  }
+  .skill-chip:hover {
+    background: #1a6bff;
+    border-color: #1a6bff;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  /* ── Project card arrow ── */
+  .card-arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+  }
+  .group:hover .card-arrow { transform: translateX(4px); }
+
+  /* ── Loading screen ── */
+  .loader-bar {
+    height: 3px;
+    background: linear-gradient(90deg, #1a6bff, #60a5fa, #1a6bff);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s linear infinite;
+  }
+
+  /* ── Form input focus ring ── */
+  .form-input {
+    width: 100%;
+    padding: 12px 16px;
+    background: #f8f7f4;
+    border: 1.5px solid #e4e2dc;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: #0d0d0d;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    resize: vertical;
+  }
+  .form-input::placeholder { color: #999999; }
+  .form-input:focus {
+    border-color: #1a6bff;
+    box-shadow: 0 0 0 3px rgba(26,107,255,0.1);
+  }
+}
+
+@layer utilities {
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #f8f7f4; }
+  ::-webkit-scrollbar-thumb { background: #e4e2dc; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #1a6bff; }
+}
+
+/* ── Keyframes (not in Tailwind keyframes because they're referenced from CSS classes) ── */
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
