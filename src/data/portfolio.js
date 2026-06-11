@@ -2,6 +2,23 @@
 // Portfolio data — edit here to update content
 // ─────────────────────────────────────────────
 
+
+import proj01 from '../assets/project-01.png'
+import proj02 from '../assets/project-02.png'
+
+export const PROJECTS = [
+  {
+    number: '01',
+    image: proj01,   // ← ADD THIS
+    // ... rest unchanged
+  },
+  {
+    number: '02',
+    image: proj02,   // ← ADD THIS
+    // ...
+  },
+]
+
 export const NAV_LINKS = [
   { label: 'About',    href: '#about'    },
   { label: 'Skills',   href: '#skills'   },
@@ -25,7 +42,7 @@ export const ABOUT = {
   badge: 'B.Tech IT · 2027',
   heading: 'Building things\nfor the web.',
   paragraphs: [
-    "I'm a third-year B.Tech Information Technology student at Jaipur Engineering College and Research Centre, currently maintaining a CGPA of 8.25. I enjoy crafting responsive, accessible web experiences and solving algorithmic challenges.",
+    "I'm a Final-Year B.Tech Information Technology student at Jaipur Engineering College and Research Centre, currently maintaining a CGPA of 8.25. I enjoy crafting responsive, accessible web experiences and solving algorithmic challenges.",
     "Beyond coding, I've represented my college at the Smart India Hackathon and coordinated large-scale academic events — experiences that shaped my ability to collaborate under pressure and think end-to-end about a product.",
     "I'm actively seeking opportunities where I can contribute meaningful work, grow fast, and be around people who care deeply about what they build.",
   ],
@@ -63,6 +80,7 @@ export const PROJECTS = [
       'A dynamic virtual keyboard-based login system designed to mitigate phishing and keylogging attacks. Implements client-side secure authentication logic with a clean, intuitive UI.',
     stack: ['HTML', 'CSS', 'JavaScript'],
     github: 'https://github.com/karan-21-web/Dynamic-Virtual-Password-System',
+    live: 'https://news-hub-ai-neon.vercel.app/', 
   },
   {
     number: '02',
@@ -71,6 +89,7 @@ export const PROJECTS = [
       'Developed a responsive real-time news application consuming the GNews API with dynamic category-wise and city-wise filtering.',
     stack: ['JavaScript', 'HTML', 'CSS', 'Node.js', 'API'],
     github: 'https://github.com/karan-21-web/NewsHub-AI',
+     live: 'https://news-hub-ai-neon.vercel.app/', 
   },
   {
     number: '03',
@@ -79,6 +98,7 @@ export const PROJECTS = [
       'Collaborated in a 6-member team at Smart India Hackathon to design and prototype a real-world problem solution under strict time constraints — from ideation to a working demo.',
     stack: ['React.js', 'Python', 'MongoDB'],
     github: 'https://github.com/karanshakarwal',
+    live: 'https://news-hub-ai-neon.vercel.app/', 
   },
 ]
 
