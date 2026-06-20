@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex items-start overflow-visible pt-4 sm:pt-8 md:pt-[68px] px-4 sm:px-8 max-w-[1120px] mx-auto bg-bg"
+      className="relative flex items-start overflow-visible pt-6 sm:pt-10 md:pt-[68px] px-4 sm:px-8 max-w-[1120px] mx-auto bg-bg"
     >
       {/* Dot-grid background (fixed so it persists across sections) */}
       <div className="hero-dot-grid" aria-hidden="true" />
