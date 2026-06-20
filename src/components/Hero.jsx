@@ -34,7 +34,10 @@ export default function Hero() {
           {HERO.eyebrow}
         </motion.p>
 
-        <motion.h1 variants={item} className="hero-name">
+        <motion.h1
+          variants={item}
+          className="hero-name text-[2.8rem] sm:text-[4rem] md:text-[5.75rem] lg:text-[7.5rem]"
+        >
           {HERO.firstName}
           <br />
           {HERO.lastName}

@@ -139,7 +139,6 @@
   /* ── Hero name clamped font ── */
   .hero-name {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(3.5rem, 9vw, 7.5rem);
     font-weight: 800;
     line-height: 1.0;
     letter-spacing: -0.03em;
