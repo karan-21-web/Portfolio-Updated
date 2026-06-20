@@ -19,7 +19,7 @@ export const HERO = {
   eyebrow: "Hello, I'm",
   firstName: 'Karan',
   lastName: 'Shakarwal',
-  tagline: 'Aspiring Software Developer / Problem Solver / Web Enthusiast',
+  tagline: 'MERN Stack Developer / Problem Solver / Tech Enthusiast',
   cta: [
     { label: 'View Projects', href: '#projects', variant: 'primary' },
     { label: 'Download Resume', href: '/KaranShakarwal_ResumeFinal.pdf', variant: 'outline', download: true },
@@ -72,19 +72,8 @@ export const PROJECTS = [
     live: 'https://placement-prepration-project.vercel.app/', 
     
   },
- {
-    number: '02',
-   image: proj02,
-    title: 'Virtual Password Authentication System',
-    description:
-      'A dynamic virtual keyboard-based login system designed to mitigate phishing and keylogging attacks. Implements client-side secure authentication logic with a clean, intuitive UI.',
-    stack: ['HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/karan-21-web/Dynamic-Virtual-Password-System',
-    live: '#'
-    
-  },
    {
-    number: '03',
+    number: '02',
      image: proj01,
     title: 'NewsHub AI – Real-Time News Web App',
     description:
@@ -92,6 +81,18 @@ export const PROJECTS = [
     stack: ['JavaScript', 'HTML', 'CSS', 'Node.js', 'API'],
     github: 'https://github.com/karan-21-web/NewsHub-AI',
      live: 'https://news-hub-ai-neon.vercel.app/', 
+  },
+ 
+   {
+    number: '03',
+   image: proj02,
+    title: 'Virtual Password Authentication System',
+    description:
+      'A dynamic virtual keyboard-based login system designed to mitigate phishing and keylogging attacks. Implements client-side secure authentication logic with a clean, intuitive UI.',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    github: 'https://github.com/karan-21-web/Dynamic-Virtual-Password-System',
+    live: '#',
+    
   },
 ]
 
