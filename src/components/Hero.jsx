@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex md:items-center items-start overflow-hidden pt-8 sm:pt-10 md:pt-[68px] px-6 sm:px-8 w-full max-w-[1120px] mx-auto"
+      className="relative flex items-start overflow-visible pt-4 sm:pt-8 md:pt-[68px] px-4 sm:px-8 max-w-[1120px] mx-auto bg-bg"
     >
       {/* Dot-grid background (fixed so it persists across sections) */}
       <div className="hero-dot-grid" aria-hidden="true" />
@@ -36,7 +36,7 @@ export default function Hero() {
 
         <motion.h1
           variants={item}
-          className="hero-name text-[2.4rem] sm:text-[3.4rem] md:text-[5.75rem] lg:text-[7.5rem]"
+          className="hero-name text-[2.2rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[7.5rem]"
         >
           {HERO.firstName}
           <br />
@@ -59,7 +59,7 @@ export default function Hero() {
 
         <motion.div
           variants={item}
-          className="flex flex-wrap gap-3 sm:flex-row flex-col items-start sm:items-center"
+          className="flex flex-wrap gap-4 sm:flex-row flex-col"
         >
           {HERO.cta.map(({ label, href, variant, download }) =>
             download ? (

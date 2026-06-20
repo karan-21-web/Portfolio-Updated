@@ -21,8 +21,8 @@ function RevealBlock({ children, delay = 0 }) {
 
 export default function About() {
   return (
-    <section id="about" className="bg-surface py-[100px]">
-      <div className="max-w-[1120px] mx-auto px-8">
+    <section id="about" className="bg-surface py-16 sm:py-24 md:py-[100px]">
+      <div className="max-w-[1120px] mx-auto px-4 sm:px-8">
 
         <RevealBlock>
           <div className="section-label">About Me</div>
