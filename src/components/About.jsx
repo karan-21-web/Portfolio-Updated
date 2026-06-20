@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { ABOUT } from '../data/portfolio'
-import photo from '../assets/photo.jpg'
+import photo from '../assets/photo.png'
 
 function RevealBlock({ children, delay = 0 }) {
   const ref  = useRef(null)
@@ -36,7 +36,7 @@ export default function About() {
               <img
                 src={photo}
                 alt="Karan Shakarwal"
-                className="w-[80px] h-[80px] md:w-[160px] md:h-[160px] rounded-[20px] object-cover object-top block shadow-card"
+                className="w-[120px] h-[120px] md:w-[220px] md:h-[220px] rounded-full object-cover object-top block shadow-card "
               />
               <span className="bg-accent-dim text-accent font-display text-[12px] font-bold tracking-[0.08em] px-[14px] py-[6px] rounded-full whitespace-nowrap">
                 {ABOUT.badge}

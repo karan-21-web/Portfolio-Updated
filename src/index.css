@@ -64,6 +64,12 @@
     white-space: nowrap;
     cursor: pointer;
   }
+  @media (max-width: 767px) {
+    .btn {
+      padding: 12px 20px;
+      font-size: 13px;
+    }
+  }
   .btn-primary {
     background: #0d0d0d;
     color: #fff;
@@ -134,6 +140,13 @@
     opacity: 0.45;
     z-index: -1;
     pointer-events: none;
+  }
+
+  @media (max-width: 767px) {
+    .hero-dot-grid {
+      background-size: 20px 20px;
+      opacity: 0.25;
+    }
   }
 
   /* ── Hero name clamped font ── */
