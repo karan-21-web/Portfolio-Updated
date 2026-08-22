@@ -28,11 +28,10 @@ export const HERO = {
 
 export const ABOUT = {
   badge: 'B.Tech IT · 2027',
-  heading: 'Building things\nfor the web.',
+  heading: 'Turning ideas\ninto products.',
   paragraphs: [
-    "I'm a Final-Year B.Tech Information Technology student at Jaipur Engineering College and Research Centre, currently maintaining a CGPA of 8.25. I enjoy crafting responsive, accessible web experiences and solving algorithmic challenges.",
-    "Beyond coding, I've represented my college at the Smart India Hackathon and coordinated large-scale academic events — experiences that shaped my ability to collaborate under pressure and think end-to-end about a product.",
-    "I'm actively seeking opportunities where I can contribute meaningful work, grow fast, and be around people who care deeply about what they build.",
+    "I'm Karan Shakarwal, a developer who enjoys taking an idea from concept to a working application. I work with modern web technologies and love solving problems that challenge me to think differently.",
+    "I'm always looking for the next problem to solve, the next technology to learn, and the next product to build.",
   ],
   meta: [
     { label: 'Location',  value: 'Jaipur, India',    type: 'text'      },
