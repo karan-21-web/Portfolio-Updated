@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { CONTACT } from '../data/portfolio'
+import emailjs from '@emailjs/browser'
 
 /* ── Individual contact info item ── */
 function ContactItem({ icon, label, display, href }) {
@@ -45,7 +46,7 @@ export default function Contact() {
     setTimeout(() => setNote({ text: '', type: '' }), 5000)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const { name, email, message } = form
 
@@ -53,12 +54,27 @@ export default function Contact() {
     if (!isValidEmail(email)) return showNote('Please enter a valid email address.', 'error')
 
     setLoading(true)
-    /* Replace this setTimeout with a real fetch() to Formspree/EmailJS */
-    setTimeout(() => {
-      setLoading(false)
-      showNote(`Thanks ${name}! I'll get back to you soon. ✓`, 'success')
+
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: name,
+          from_email: email,
+          message: message
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      
+      showNote('Feedback sent successfully', 'success')
       setForm({ name: '', email: '', message: '' })
-    }, 1200)
+    } catch (error) {
+      showNote('Something went wrong. Please try again.', 'error')
+    } finally {
+      // Always stop loading at the end
+      setLoading(false)
+    }
   }
 
   return (
