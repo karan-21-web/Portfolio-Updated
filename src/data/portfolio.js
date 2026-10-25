@@ -43,7 +43,7 @@ export const ABOUT = {
 export const SKILLS = [
   {
     category: 'Web Development',
-    chips: ['HTML5', 'CSS3', 'JavaScript', 'React.js'],
+    chips: ['HTML5', 'CSS3', 'JavaScript', 'React.js','Node.js','Express.js','Tailwind CSS'],
   },
   {
     category: 'Languages',
@@ -55,7 +55,7 @@ export const SKILLS = [
   },
   {
     category: 'Tools & Platforms',
-    chips: ['Git', 'GitHub', 'VS Code', 'REST APIs'],
+    chips: ['Git', 'GitHub', 'VS Code', 'REST APIs' , 'AI Automation'],
   },
 ]
 
